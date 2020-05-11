@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="tryAgainText"
+            type="String" />
+
+        <variable
+                name="iTryClick"
+                type="com.nmg.baseinfrastructure.base.OnRetryClick" />
+    </data>
+
+    <merge>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{tryAgainText}"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:visibility="@{iTryClick == null ? View.GONE : View.VISIBLE }"
+                android:textColor="?attr/colorPrimary"
+                android:onClick="@{(v)->iTryClick.onRetry()}"
+            android:gravity="center_horizontal" />
+    </merge>
+
+
+</layout>
