@@ -59,9 +59,12 @@ import kotlin.String as String1
         @SuppressLint("LogNotTimber")
         fun getCustomErrorMessage(error: Throwable): kotlin.String {
 
-            Log.e("ApiResponse" , error.message)
+            val context = App.appInstance.applicationContext
 
-        /*    val context = App.appInstance.applicationContext
+            error.message?.let {
+                Log.e("ApiResponse" , it)
+                return error.message.toString()
+            }
 
             return if (error is SocketTimeoutException) {
                 if(error.message?.contains("401",true)==true){
@@ -71,7 +74,7 @@ import kotlin.String as String1
                     context.getString(R.string.requestTimeOutError)
 
                 }
-            }*//* else if (error is MalformedJsonException) {
+            } else if (error is MalformedJsonException) {
                 context.getString(R.string.responseMalformedJson)
             } else if (error is UnknownHostException) {
                 context.getString(R.string.unknownError)
@@ -83,9 +86,7 @@ import kotlin.String as String1
                 context.getString(R.string.unknownError)
             } else {
                 context.getString(R.string.unknownError)
-            }*/
-
-            return error.message.toString()
+            }
         }
     }
 }
