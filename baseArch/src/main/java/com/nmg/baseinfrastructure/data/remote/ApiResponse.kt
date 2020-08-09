@@ -50,7 +50,7 @@ import kotlin.String as String1
 
                 val errorFromBody = ApiServiceFactory.errorHandler?.getErrorFromBody(errorBody)
 
-                val errorMsg = if(errorBody == null) response.message() else errorFromBody
+                val errorMsg =  errorFromBody
 
                 ApiErrorResponse(errorMsg ?: getCustomErrorMessage(Throwable(errorMsg)))
             }
