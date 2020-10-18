@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BaseInfraStructure</string>
     <string name="retryText">إعادة المحاولة</string>
     <string name="notDataFound">لم يتم العثور علي بيانات</string>
     <string name="errorMessage">لقد حدث خطأ</string>

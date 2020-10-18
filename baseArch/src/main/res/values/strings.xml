@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">BaseInfraStructure</string>
     <string name="retryText">Retry</string>
     <string name="notDataFound">No Data Found</string>
     <string name="errorMessage">An Error Occurred</string>
